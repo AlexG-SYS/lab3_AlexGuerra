@@ -13,8 +13,12 @@ type Handler struct {
 
 func (h *Handler) HomeHandler(w http.ResponseWriter, r *http.Request) {
 	data := map[string]string{
-		"status":  "available",
-		"message": "Welcome to the Home Page!",
+		"status":       "available",
+		"productSKU":   "72936734897923",
+		"product_name": "White Shirt",
+		"cost":         "23.23",
+		"price":        "49.99",
+		"qty":          "5",
 	}
 	h.App.WriteJSON(w, http.StatusOK, data, nil)
 }
